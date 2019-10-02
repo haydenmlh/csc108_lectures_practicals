@@ -1,0 +1,11 @@
+def example (x):
+    print (2 * x)
+    return
+
+def triangle_area_sides (a: int, b: int, c: int)-> float:
+    '''compute the area of an equalateral triangle given its sides.
+    >>> area_triangle (3, 4, 5)
+    6.0
+    '''
+    s = 1 / 2 * (a + b + c)
+    return (s * (s - a) * (s - b) * (s - c)) ** 0.5

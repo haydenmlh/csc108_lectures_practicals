@@ -1,0 +1,15 @@
+def cel_to_fahr(cel: float) -> float:
+    '''Convert degrees in Celsius to Fahrenheit
+    >>> cel_to_fahr(100.0)
+    212.0
+    '''
+    fahr = cel * 9 / 5 + 32
+    return fahr
+
+def fahr_to_cel(fahr: float) -> float:
+    '''Convert degrees in Fahrenheit to Celsius
+    fahr_to_cel(212,0)
+    100
+    '''
+    cel = (fahr - 32) * 5 / 9
+    return cel

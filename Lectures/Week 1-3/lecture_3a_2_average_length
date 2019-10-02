@@ -1,0 +1,12 @@
+def average_length(string1: str, string2: str) -> float:
+    ''' Takes string1 and string2 and returns the average length of the strings
+    >>> average_length("hello", "me")
+    3.5
+    >>> average_length("hi", "me")
+    2.0
+    '''
+    return (len(string1) + len(string2)) / 2
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()

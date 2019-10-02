@@ -1,0 +1,16 @@
+def sum_n_positive(n: int) -> int:
+    '''
+    Returns the sum of the first n positive numbers, given  n
+    >>> sum_n_positive(1)
+    1
+    >>> sum_n_positive(2)
+    3
+    >>> sum_n_positive(3)
+    6
+    '''
+    return n * (n + 1) // 2
+
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()

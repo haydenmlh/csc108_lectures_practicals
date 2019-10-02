@@ -1,0 +1,19 @@
+def capitalize(word: str) -> str:
+    return word.title()
+
+def middle_x(word: str, width: int) -> str:
+    # return "x" * width // 2 + str + "x" width //2
+    return word.center( width, "x")
+
+def format_csv(row: str) -> list:
+    """
+    >>> format_csv('"Andrew Peterson,3.0,t,t,f   ')
+    ['Andrew Peterson', '3.0', 't', 't', 'f']
+    """
+    row = row.strip()
+    row = row.replace("\"", "")
+    return row.split(",")
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()

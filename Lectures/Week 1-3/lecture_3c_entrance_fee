@@ -1,0 +1,40 @@
+def entrance_fee(age: int) -> float:
+    ''' Returns the entrance fee given the age of the customer.
+    Remember to write the documentation first.
+    >>> entrance_fee(5)
+    0.0
+    >>> entrance_fee(8)
+    8.0
+    >>> entrance_fee(15)
+    15.0
+    >>> entrance_fee(50)
+    25.0
+    >>> entrance_fee(65)
+    25.0
+    >>> entrance_fee(66)
+    21.25
+
+    Example of production code
+
+    if age < YOUNG_KID_AGE:
+        return YOUNG_KID_FEE
+    elif age < CHILD_AGE:
+        return float(age)
+    elif age < SENIOR_AGE:
+        return ADULT_FEE
+    else: # >= 66
+        return 21.25
+    '''
+    if age < 8:
+        return 0.0
+    elif age <= 18:
+        return float(age) # better than age / 1 because it shows what you're doing more clearly
+    elif age <= 65:
+        return 25.0
+    else:
+        return 21.25 #we know the value so don't need 25 * 0.85
+
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()

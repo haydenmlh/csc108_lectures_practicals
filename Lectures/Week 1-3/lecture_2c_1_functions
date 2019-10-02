@@ -1,0 +1,42 @@
+REQUIRED_CGPA = 2.0
+
+def pey_eligible(cgpa: float, current_year: int, in_cs: bool) -> bool:
+    '''
+    Returns True iff a student, given current CGPA and the current year and if the student is in CS, is eligible for PEY
+    >>> pey_eligible(2.0, 2, True)
+    True
+    >>> pey_eligible(1.9, 2, True)
+    False
+    >>> pey_eligible(2.3, 1, True)
+    False
+    >>> pey_eligible(2.0, 2, False)
+    False
+    >>> pey_eligible(2.0, 3, True)
+    True
+    '''
+    return cgpa >= REQUIRED_CGPA and (current_year == 2 or current_year == 3) and in_cs == True
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
+
+#    my idiot code
+#
+#    number_satisfied = 0
+#
+#    if(cgpa >= 2.0):
+#        number_satisfied += 1
+#
+#    if(current_year == 2 or current_year == 3):
+#        number_satisfied += 1
+#
+#    if(in_cs == True):
+#        number_satisfied += 1
+#
+#    if(number_satisfied == 3):
+#        return True
+#    else:
+#        return False
+
+
+

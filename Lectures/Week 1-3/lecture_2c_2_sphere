@@ -1,0 +1,15 @@
+from math import pi
+
+def sphere_volume(radius: float) -> float:
+    '''
+    Return the volume of a sphere given the radius of the sphere
+    >>> sphere_volume(0)
+    0.0
+    >>> sphere_volume(1)
+    4.1887902047863905
+    '''
+    return 4/3 * pi * radius ** 3
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()

@@ -1,0 +1,15 @@
+def is_palindrome(word: str) -> str:
+    '''
+    Returns if the word is a palindrome, which is the string is the same forwards and backwards
+    >>> is_palindrome("racecar")
+    True
+    >>> is_palindrome("stats")
+    True
+    >>> is_palindrome("hello")
+    False
+    '''
+    return word == word[::-1]
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()

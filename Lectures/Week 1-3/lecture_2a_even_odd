@@ -1,0 +1,23 @@
+def is_even (x : int) -> bool:
+    '''Evaluate if x is even
+    is_even (2)
+    True
+    is_even (3)
+    False
+
+    return not bool(x % 2) <- My code, not so good
+    '''
+    return x % 2 == 0
+
+def is_odd (x : int) -> bool:
+    '''
+    Evaluate if x is odd
+    is_odd (3)
+    True
+    is_odd (4)
+
+    '''
+    if x % 2 == 0:
+        return
+    else:
+        return True
