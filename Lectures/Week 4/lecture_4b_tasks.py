@@ -45,9 +45,9 @@ def encrypt_caesar(plaintext: str, shift: int) -> str:
 
 
 def decrypt_caesar(encrypted: str, shift: int) -> str:
-    '''Decrypt the encrypted text using a caesar cypher with rotation shift
+    ''' Return the encrypted text using a caesar cypher with rotation shift
     given the shift.
-    Assumption: plaintext includes ONLY whitespace and upper case characters
+    Assumption: encrypted includes ONLY whitespace and upper case characters
     >>> decrypt_caesar('BCDA', 1)
     'ABCZ'
     >>> decrypt_caesar('BC XZ', -2)
@@ -56,6 +56,7 @@ def decrypt_caesar(encrypted: str, shift: int) -> str:
     final = ''
     for i in encrypted:
         if not i.isspace():
+            # ord('A') = 65
             final += chr((ord(i) - 65 - shift) % 26 + 65)
         else:
             final += i
@@ -64,5 +65,4 @@ def decrypt_caesar(encrypted: str, shift: int) -> str:
 
 if __name__ == '__main__':
     import doctest
-
     doctest.testmod()
