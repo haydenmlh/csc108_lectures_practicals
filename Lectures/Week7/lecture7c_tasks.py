@@ -22,7 +22,6 @@ def freq_firstletter(infile: TextIO, outfile: TextIO) -> None:
     for (letter, count) in count.items():
         outfile.write(f'{letter} {count}\n')
     outfile.close()
-    key =
 
 
 if __name__ == '__main__':
